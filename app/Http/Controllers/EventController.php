@@ -8,8 +8,6 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-date_default_timezone_set('Europe/Paris');
-
 class EventController extends Controller
 {
     /**

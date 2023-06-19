@@ -22,7 +22,7 @@
 </head>
 
 <body class="bg-dark">
-    <div class="d-flex flex-column min-vh-100 bg-image" style="background-image: url('/storage/background/cl2.png');">
+    <div class="d-flex flex-column min-vh-100 bg-image" style="background-image: url('/storage/background/cl2.jpg');">
         @include('layouts.navigation')
 
         <div class="container-lg pt-5">

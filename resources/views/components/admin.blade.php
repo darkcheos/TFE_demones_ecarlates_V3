@@ -22,14 +22,13 @@
 </head>
 
 <body class="bg-dark">
-
     @include('layouts.navigation')
-    <div class="d-flex flex-row pt-4 ">
+    <div class="d-flex flex-row flex-wrap pt-4 ">
         <!-- Page Heading -->
         @include('layouts.navigation-lateral')
 
         <!-- Page Content -->
-        <main class="px-4 col-11">
+        <main class="px-4 col-xl-11 col-12">
             @if (isset($header))
                 <header class="">
                     <div class="max-w-7xl mx-auto py-4 px-4 text-white">

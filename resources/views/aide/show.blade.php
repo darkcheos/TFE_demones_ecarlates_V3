@@ -16,7 +16,7 @@
                 <div class="dropdown text-white">
                     <div class="d-flex flex-column align-items-start">
                         <div class="dropdown d-flex flex-column text-white m-3">
-                            <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#demo"> ajoute
+                            <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#demo"> Ajouter
                             </button>
 
                             <form id="demo" method="POST" action="{{ route('aide.store') }}"
@@ -24,10 +24,10 @@
                                 @csrf
 
                                 <div>
-                                    <x-input-label for="aid_titre" :value="__('nom de l\'aide')" />
+                                    <x-input-label for="aid_titre" :value="__('Nom de l\'aide')" />
                                     <x-text-input id="aid_titre" class="block mt-1 w-full" type="text" name="aid_titre"
                                         required autofocus />
-                                    <x-input-label for="aid_lien" :value="__('nom de l\'aide')" />
+                                    <x-input-label for="aid_lien" :value="__('Lien')" />
                                     <x-text-input id="aid_lien" class="block mt-1 w-full" type="text" name="aid_lien" />
                                     <input name="aid_cat_id" hidden value="{{ $id }}" hidden>
                                 </div>

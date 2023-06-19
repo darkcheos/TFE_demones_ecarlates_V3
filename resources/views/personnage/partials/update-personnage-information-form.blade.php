@@ -29,7 +29,7 @@
                 class="form-control block w-100 mt-3" rows="5">{{ $personnage->use_description }}</textarea>
                 <x-input-error class="mt-2" :messages="$errors->get('use_description')" />
             </div>
-            <p class="mb-1">Role main</p>
+            <p class="mb-1">Rôle principal</p>
             <footer class="mb-2 d-flex">
                 <div class="btn-group-toggle me-3" data-toggle="buttons">
                     <input type="checkbox" id="use_tank" name="use_tank" value="1" class="btn-check"

@@ -20,7 +20,7 @@ class AdminMiddleware
     {
         if(Auth::check())
         {
-            if(Auth::user()->use_role_id >= '7')
+            if(Auth::user()->use_role_id >= '6')
             {
                 return $next($request);
             }

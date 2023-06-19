@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccueilController;
+use App\Http\Controllers\MentionController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminParametreController;
 use App\Http\Controllers\AideController;
@@ -25,11 +26,12 @@ use function Pest\Laravel\post;
 */
 
 Route::get('/', [AccueilController::class, 'index'])->name('accueil');
+Route::get('/mention', [MentionController::class, 'index'])->name('mention');
 
 
 Route::resource('/event', EventController::class);
 
-// route uniquement pour les membres
+
 Route::middleware('auth')->group(function () {
     Route::get('/Compte', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -39,7 +41,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/personnage/update', [PersonnageController::class, "update"])->name('personnage.update');
 });
 
-// route uniquement pour les membres et validation du mail obligatoire
 Route::middleware('auth', 'verified')->group(function () {
 
     Route::get('/home', function () {return view('home');})->name('home');
@@ -55,7 +56,6 @@ Route::middleware('auth', 'verified')->group(function () {
 Route::get('/personnage', [PersonnageController::class, "index"])->name('personnage.index');
 Route::get('/personnage/{id}', [PersonnageController::class, "show"])->name('personnage.show');
 
-//route reserver uniquement pour les admin et modérateur du site
 Route::middleware('auth', "roleAdmin")->group(function () {
     Route::get('/admin', [AdminUserController::class, 'indexDemande'])->name('admin.index');
     Route::post('/admin/{id}', [AdminUserController::class, 'updateDemande'])->name('admin.updateDemande');

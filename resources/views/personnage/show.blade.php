@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="card-footer mt-auto">
-                    <h4>Role main</h4>
+                    <h4>Rôle principal</h4>
                     <div class="mb-2">
                     @if ($personnage->use_tank == 1)
                         Tank

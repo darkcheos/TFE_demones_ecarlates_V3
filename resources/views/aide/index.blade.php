@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        {{ __('Aides') }}
+        {{ __('Catégories') }}
     </x-slot>
 
     <div class="">
@@ -11,7 +11,7 @@
                     <div class="d-flex flex-column align-items-start">
                         <div class="dropdown d-flex flex-column text-white m-3">
                             <button class="btn btn-success m-1" data-bs-toggle="collapse" data-bs-target="#demo">
-                                ajoute
+                                Ajouter une catégorie
                             </button>
 
                             <form id="demo" method="POST" action="{{ route('categorie.store') }}"
@@ -19,7 +19,7 @@
                                 @csrf
 
                                 <div>
-                                    <x-input-label for="cat_nom" :value="__('nom de la catégorie')" />
+                                    <x-input-label for="cat_nom" :value="__('Nom de la catégorie')" />
                                     <x-text-input id="cat_nom" class="block mt-1 w-full" type="text" name="cat_nom"
                                         required autofocus />
                                 </div>

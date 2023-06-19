@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        {{ __('Evenements') }}
+        {{ __('Évènements') }}
     </x-slot>
 
     <div class="py-12">
@@ -11,13 +11,13 @@
                 @if (Auth::user()->use_role_id >= 4)
                     <div class="dropdown d-flex flex-column text-white">
                         <x-success-button class="m-4" data-bs-toggle="collapse" data-bs-target="#demo">Ajouter un
-                            evenement</x-success-button>
+                            évènement</x-success-button>
                         <form id="demo" method="POST" action="{{ route('event.store') }}"
                             class="collapse bg-dark p-3 rounded-3">
                             @csrf
 
                             <div class="form-group">
-                                <label for="titre" class="col-form-label">image</label>
+                                <label for="titre" class="col-form-label">Image</label>
 
                                 <div>
                                     <select id="image" name="image">
@@ -29,24 +29,24 @@
                             </div>
 
                             <div>
-                                <x-input-label for="eve_titre" :value="__('eve_titre')" />
+                                <x-input-label for="eve_titre" :value="__('Titre')" />
                                 <x-text-input id="eve_titre" class="block mt-1 w-full" type="text" name="eve_titre"
                                     required autofocus />
                             </div>
 
                             <div class="mt-2">
-                                <x-input-label for="eve_contenu" :value="__('eve_contenu')" />
+                                <x-input-label for="eve_contenu" :value="__('Contenu')" />
                                 <x-text-input id="eve_contenu" class="block mt-1 w-full" type="text" name="eve_contenu"
                                     required />
                             </div>
                             <div class="mt-2">
-                                <x-input-label for="eve_date_event" :value="__('eve_date_event')" />
+                                <x-input-label for="eve_date_event" :value="__('Date début event')" />
 
                                 <x-text-input-datetime id="eve_date_event" class="block mt-1 w-full" type="datetime-local"
                                     name="eve_date_event" required />
                             </div>
                             <div class="mt-2">
-                                <x-input-label for="eve_fin_event" :value="__('eve_fin_event')" />
+                                <x-input-label for="eve_fin_event" :value="__('Date fin event')" />
 
                                 <x-text-input-datetime id="eve_fin_event" class="block mt-1 w-full" type="datetime-local"
                                     name="eve_fin_event" required />
@@ -76,7 +76,7 @@
                     </header>
                     <main class="mb-3 text-center">
                         <p>{{ $event->eve_contenu }}</p>
-                        debut le {{ gmdate('d/m/Y H:i', strtotime($event->eve_date_event)) }} - fin le
+                        Début le {{ gmdate('d/m/Y H:i', strtotime($event->eve_date_event)) }} - fin le
                         {{ gmdate('d/m/Y H:i', strtotime($event->eve_fin_event)) }}
                     </main>
                     <footer class="d-flex justify-content-center">

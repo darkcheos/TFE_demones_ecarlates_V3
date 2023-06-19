@@ -51,7 +51,7 @@
                                     {{ __('Personnage') }}
                                 </a>
                             </li>
-                            @if (auth::user()->use_role_id >= 8)
+                            @if (auth::user()->use_role_id >= 6)
                                 <li class="nav-item text-center">
                                     <a class="dropdown-item" href="{{ route('admin.index') }}">
                                         {{ __('Admin') }}
@@ -82,7 +82,7 @@
                             data-bs-auto-close="false" aria-expanded="false">
                             Connexion
                         </button>
-                        <div class="dropdown-menu dropdown-large  dropdown-menu-end dropdown-menu-dark px-2"
+                        <div class="dropdown-menu  dropdown-menu-end dropdown-menu-dark px-2"
                             aria-labelledby="dropdownMenuClickable">
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf

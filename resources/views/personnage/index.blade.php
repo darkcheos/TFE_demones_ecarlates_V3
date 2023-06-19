@@ -16,7 +16,7 @@
                                     style="max-height: 260px">
                             </header>
                             <main>
-                                <h4 class=" justify-content-center">
+                                <h4 class="justify-content-center">
                                     {{ ucwords($personnage->use_firstname . ' ' . $personnage->use_lastname) }}</h4>
                                 <p>{{ $personnage->use_role->rol_nom }}</p>
                             </main>
